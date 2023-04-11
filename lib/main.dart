@@ -6,6 +6,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'HomeScreen.dart';
 import 'loginScreen.dart';
 import 'signupScreen.dart';
+import '11thScreen.dart';
+import '12thScreen.dart';
+import 'FeeScreen.dart';
+import 'HomePage.dart';
+
 
 
   void main()  {
@@ -27,7 +32,11 @@ class MyApp extends StatelessWidget {
       home: SplashScreen(),
       routes: {
         'loginScreen': (context) => LoginScreen(),
-        'HomeScreen': (context) => HomeScreen()
+        'HomePage' : (context) => homepage(),
+        // 'HomeScreen': (context) => HomeScreen(),
+        '11thScreen' : (context) => StudyMaterial(),
+        '12thScreen' : (context) => studymaterial(),
+
       },
     );
   }

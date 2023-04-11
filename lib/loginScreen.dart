@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'signupScreen.dart';
+import '11thScreen.dart';
 
 class LoginScreen extends StatefulWidget {
 
@@ -170,11 +171,11 @@ class LoginScreenState extends State<LoginScreen> {
 
   Widget buildLoginBtn(){
     return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context,'HomeScreen');
-      },
+
       child: ElevatedButton(
-          onPressed: () => print('Login Pressed'),
+          onPressed: () {
+            Navigator.pushNamed(context,'HomePage');
+          },
       style: ElevatedButton.styleFrom(
           padding: EdgeInsets.all(15),
           shape: RoundedRectangleBorder(
