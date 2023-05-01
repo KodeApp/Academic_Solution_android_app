@@ -1,20 +1,21 @@
-import 'package:academic_solution/signupScreen.dart';
+import 'package:academic_solution/Attendance.dart';
 import 'package:academic_solution/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'HomeScreen.dart';
 import 'loginScreen.dart';
-import 'signupScreen.dart';
 import '11thScreen.dart';
 import '12thScreen.dart';
-import 'FeeScreen.dart';
 import 'HomePage.dart';
+import 'syllabus.dart';
+import 'Notes.dart';
+import 'DailyPractice.dart';
+import 'Exam.dart';
 
 
-
-  void main()  {
-
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
     runApp(MyApp());
   }
 
@@ -36,6 +37,11 @@ class MyApp extends StatelessWidget {
         // 'HomeScreen': (context) => HomeScreen(),
         '11thScreen' : (context) => StudyMaterial(),
         '12thScreen' : (context) => studymaterial(),
+        'syllabus' : (context) => Syllabus(),
+        'Attendance' : (context)=> Attendance(),
+        'DailyPractice' :(context)=> DailyPractice(),
+        'Notes' :(context)=> Notes(),
+        'Exam' :(context)=> Exam(),
 
       },
     );
